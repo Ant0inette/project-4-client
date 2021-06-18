@@ -7,9 +7,12 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 function Home() {
+
   React.useEffect(() => {
     console.log('HomePage mounted.')
   }, [])
+
+
 
   return (
     <>
@@ -18,7 +21,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
+            src="https://i.imgur.com/EGsFQlc.png"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -29,7 +32,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="https://imgur.com/uhloMEX.png"
             alt="Second slide"
           />
 
@@ -40,7 +43,7 @@ function Home() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="https://imgur.com/CHtQa63.png"
             alt="Third slide"
           />
 
@@ -51,7 +54,7 @@ function Home() {
         </Carousel.Item>
       </Carousel>
       <footer>
-        <Accordion defaultActiveKey="0">
+        <Accordion >
           <Card>
             <Card.Header>
               <Accordion.Toggle as={Button} variant="link" eventKey="0">

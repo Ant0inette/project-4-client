@@ -55,7 +55,7 @@ function AllDreams() {
       <section>
 
         <h1>
-          All memories
+          Dreams
         </h1>
 
         <container>
@@ -89,8 +89,8 @@ function AllDreams() {
                   {dream.date}
                 </h5>
                 <img
-                  height="540px"
-                  width="810px"
+                  height="256px"
+                  width="256px"
                   src={dream.image}
                   alt={dream.title}
                 />

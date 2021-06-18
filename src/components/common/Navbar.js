@@ -7,9 +7,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
+import Nav from 'react-bootstrap/Nav'
 
 
-function Nav() {
+function CustomNav() {
 
   const history = useHistory()
   const isLogged = isAuthenticated()
@@ -22,12 +23,12 @@ function Nav() {
 
     <Navbar sticky='top'>
 
-      <Navbar.Brand href="home">Endless</Navbar.Brand>
+      <Navbar.Brand href="home"><img src="https://imgur.com/2tJSCth.png" alt="logo" /></Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           {!isLogged &&
             <Nav.Link href="login">Log in</Nav.Link>
           }
@@ -59,4 +60,4 @@ function Nav() {
   )
 }
 
-export default Nav
+export default CustomNav
