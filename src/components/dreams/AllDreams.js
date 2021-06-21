@@ -5,11 +5,18 @@ import { Link } from 'react-router-dom'
 import Error from '../common/Error'
 import { baseUrl, dreamsPath } from '../../lib/api'
 
+import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
+import CardColumns from 'react-bootstrap/CardColumns'
+
+
+
+
 function AllDreams() {
 
   const [dreams, setDreams] = React.useState(null)
   const [isError, setIsError] = React.useState(false)
-  const [searchTerm, setSearchTerm] = React.useState('')
+ 
   const isLoading = !dreams && !isError
 
 
@@ -29,14 +36,7 @@ function AllDreams() {
     getData()
   }, [])
 
-  //* search functions
-  const handleInput = (e) => {
-    setSearchTerm(e.target.value)
-  }
-
-  const handleClear = () => {
-    setSearchTerm('')
-  }
+ 
 
   const filteredDreams = dreams?.filter((dream) => {
     return (
@@ -52,60 +52,32 @@ function AllDreams() {
 
   return (
     <>
-      <section>
 
-        <h1>
-          Dreams
-        </h1>
+      <Container fluid>
 
-        <container>
-
-          {isError && <Error />}
-          {isLoading && <p>...loading</p>}
-
-
-          <aside >
-            <input
-              type="text"
-              placeholder="Find dream..."
-              onChange={handleInput}
-              value={searchTerm}
-            />
-
-            <button onClick={handleClear}>
-              Clear
-            </button>
-
-          </aside>
-
-
+        {isError && <Error />}
+        {isLoading && <p>...loading</p>}
+        <CardColumns>
           {filteredDreams && (filteredDreams.map(dream =>
-
-            <div key={dream._id}>
-              <Link to={`${dreamsPath}/${dream._id}`}>
-                <h3>{dream.title}</h3>
-
-                <h5>
-                  {dream.date}
-                </h5>
-                <img
-                  height="256px"
-                  width="256px"
-                  src={dream.image}
-                  alt={dream.title}
-                />
-                <p>{dream.description}</p>
-
-              </Link>
-            </div>
-
+            // eslint-disable-next-line react/jsx-key
+            <Link to={`${dreamsPath}/${dream._id}`}>
+              <Card><Card.Img variant="top" src={dream.image} />
+                <Card.Body>
+                  <Card.Title>{dream.title}</Card.Title>
+                  <Card.Text>
+                    {dream.description}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
           ))}
-        </container>
-      </section>
+        </CardColumns>
+
+
+      </Container>
+
+
     </>
-
-
-
 
   )
 }

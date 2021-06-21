@@ -23,12 +23,11 @@ function CustomNav() {
 
     <Navbar sticky='top'>
 
-      <Navbar.Brand href="home"><img src="https://imgur.com/2tJSCth.png" alt="logo" /></Navbar.Brand>
+      <Navbar.Brand href="/"><img src="https://imgur.com/2tJSCth.png" alt="logo" /></Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
           {!isLogged &&
             <Nav.Link href="login">Log in</Nav.Link>
           }
@@ -36,6 +35,7 @@ function CustomNav() {
             <Nav.Link href="register">Register</Nav.Link>
           }
           <NavDropdown title="Menu" id="basic-nav-dropdown">
+          
             {isLogged &&
               <NavDropdown.Item href="new_dream">New Dream</NavDropdown.Item>
             }

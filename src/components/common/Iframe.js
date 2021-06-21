@@ -48,7 +48,7 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function IframePage() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState(false)
 
   return (
     <>

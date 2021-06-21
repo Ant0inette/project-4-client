@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 import Carousel from 'react-bootstrap/Carousel'
 import Login from '../auth/Login'
-import Accordion  from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
@@ -16,44 +16,7 @@ function Home() {
 
   return (
     <>
-      <h1>Home</h1>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://i.imgur.com/EGsFQlc.png"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-          
-            <p> Before they fizzle away...</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://imgur.com/uhloMEX.png"
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <p>Store a trace of your dreams...</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://imgur.com/CHtQa63.png"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            
-            <p>Have them illustrated by state-of-the-art neural networks today.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-      <footer>
+      <header>
         <Accordion >
           <Card>
             <Card.Header>
@@ -68,7 +31,45 @@ function Home() {
             </Accordion.Collapse>
           </Card>
         </Accordion>
-      </footer>
+      </header>
+      <Carousel>
+        <Carousel.Item>
+
+          <img
+            className="d-block w-100"
+            src="https://i.imgur.com/EGsFQlc.png"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h1> Endless Dreamlog</h1>
+            
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://imgur.com/uhloMEX.png"
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h2>Before they fizzle away... Store a trace of your dreams...</h2> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://imgur.com/CHtQa63.png"
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+
+            <h3> illustrated by state-of-the-art neural networks</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+
     </>
 
 
