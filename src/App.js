@@ -15,6 +15,7 @@ import NewDream from './components/dreams/NewDream'
 import Users from './components/common/Users'
 import SecureRoute from './components/common/SecureRoute'
 import EditDream from './components/dreams/EditDream'
+import DreamVisualiser from './components/dreams/DreamVisualiser'
 
 function App() {
   return (
@@ -26,11 +27,11 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
-
+       
 
         <Route path="/categories" component={Categories} />
         <Route path="/users" component={Users} />
-
+        <Route path="/visualizer" component={DreamVisualiser}
 
         <Route path="/dreams" component={AllDreams} />
         <Route path="/dreams/:dreamId" component={SingleDream} />
